@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F769D2B12239ECB000950A25 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F769D2B02239ECB000950A25 /* ButtonTableViewCell.swift */; };
 		F77512862239A75C0080ED4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77512852239A75C0080ED4A /* AppDelegate.swift */; };
-		F77512882239A75C0080ED4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77512872239A75C0080ED4A /* ViewController.swift */; };
 		F775128B2239A75C0080ED4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77512892239A75C0080ED4A /* Main.storyboard */; };
 		F775128E2239A75C0080ED4A /* TaskProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F775128C2239A75C0080ED4A /* TaskProject.xcdatamodeld */; };
 		F77512902239A75E0080ED4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F775128F2239A75E0080ED4A /* Assets.xcassets */; };
 		F77512932239A75E0080ED4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77512912239A75E0080ED4A /* LaunchScreen.storyboard */; };
+		F77512A12239A8FC0080ED4A /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77512A02239A8FC0080ED4A /* TaskListTableViewController.swift */; };
+		F77512A32239AB7C0080ED4A /* TaskDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77512A22239AB7C0080ED4A /* TaskDetailTableViewController.swift */; };
+		F77512A72239AE000080ED4A /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77512A62239AE000080ED4A /* Task+Convenience.swift */; };
+		F77512A92239AF130080ED4A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77512A82239AF130080ED4A /* CoreDataStack.swift */; };
+		F77512AB2239AFE00080ED4A /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77512AA2239AFE00080ED4A /* TaskController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F769D2B02239ECB000950A25 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		F77512822239A75C0080ED4A /* TaskProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77512852239A75C0080ED4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F77512872239A75C0080ED4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F775128A2239A75C0080ED4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F775128D2239A75C0080ED4A /* TaskProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskProject.xcdatamodel; sourceTree = "<group>"; };
 		F775128F2239A75E0080ED4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F77512922239A75E0080ED4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F77512942239A75E0080ED4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F77512A02239A8FC0080ED4A /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		F77512A22239AB7C0080ED4A /* TaskDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailTableViewController.swift; sourceTree = "<group>"; };
+		F77512A62239AE000080ED4A /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
+		F77512A82239AF130080ED4A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F77512AA2239AFE00080ED4A /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		F77512842239A75C0080ED4A /* TaskProject */ = {
 			isa = PBXGroup;
 			children = (
+				F775129D2239A7B00080ED4A /* Models */,
+				F775129C2239A7AE0080ED4A /* Controllers */,
+				F775129B2239A7AD0080ED4A /* Views */,
+				F775129A2239A7AC0080ED4A /* Resources */,
+			);
+			path = TaskProject;
+			sourceTree = "<group>";
+		};
+		F775129A2239A7AC0080ED4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				F77512852239A75C0080ED4A /* AppDelegate.swift */,
-				F77512872239A75C0080ED4A /* ViewController.swift */,
-				F77512892239A75C0080ED4A /* Main.storyboard */,
 				F775128F2239A75E0080ED4A /* Assets.xcassets */,
 				F77512912239A75E0080ED4A /* LaunchScreen.storyboard */,
 				F77512942239A75E0080ED4A /* Info.plist */,
-				F775128C2239A75C0080ED4A /* TaskProject.xcdatamodeld */,
 			);
-			path = TaskProject;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F775129B2239A7AD0080ED4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F77512892239A75C0080ED4A /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F775129C2239A7AE0080ED4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F775129F2239A7D90080ED4A /* ModelControllers */,
+				F775129E2239A7D80080ED4A /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F775129D2239A7B00080ED4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F775128C2239A75C0080ED4A /* TaskProject.xcdatamodeld */,
+				F77512A62239AE000080ED4A /* Task+Convenience.swift */,
+				F77512A82239AF130080ED4A /* CoreDataStack.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F775129E2239A7D80080ED4A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F77512A02239A8FC0080ED4A /* TaskListTableViewController.swift */,
+				F77512A22239AB7C0080ED4A /* TaskDetailTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F775129F2239A7D90080ED4A /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F77512AA2239AFE00080ED4A /* TaskController.swift */,
+				F769D2B02239ECB000950A25 /* ButtonTableViewCell.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F77512AB2239AFE00080ED4A /* TaskController.swift in Sources */,
+				F77512A12239A8FC0080ED4A /* TaskListTableViewController.swift in Sources */,
 				F775128E2239A75C0080ED4A /* TaskProject.xcdatamodeld in Sources */,
-				F77512882239A75C0080ED4A /* ViewController.swift in Sources */,
+				F769D2B12239ECB000950A25 /* ButtonTableViewCell.swift in Sources */,
 				F77512862239A75C0080ED4A /* AppDelegate.swift in Sources */,
+				F77512A92239AF130080ED4A /* CoreDataStack.swift in Sources */,
+				F77512A32239AB7C0080ED4A /* TaskDetailTableViewController.swift in Sources */,
+				F77512A72239AE000080ED4A /* Task+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q89A379BUF;
-				INFOPLIST_FILE = TaskProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TaskProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q89A379BUF;
-				INFOPLIST_FILE = TaskProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TaskProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
