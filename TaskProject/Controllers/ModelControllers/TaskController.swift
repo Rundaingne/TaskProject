@@ -13,25 +13,19 @@ class TaskController {
     
     //MARK: Singleton
     static let shared = TaskController()
-    
+    private init() {}
     //MARK: Source of truth
-    //This will be the MOC, and will be a computed property
-    var tasks: [Task] {
-        return fetchTasks()
-    }
-        //First I need to grab the paylists off the hard drive. Make a request:
+    //This will be the MOC. We can actually just use the fetchedResultsController and the CoreDataStack to store all of our data. Whoa.
     
     //MARK: Mock Data
     
     //MARK: CRUD
-    func addTask(taskWithName name: String, notes: String?, due: Date?) {
-        guard let notes = notes,
-            let due = due else {return}
+    func addTask(taskWithName name: String, notes: String, due: Date) {
         Task(name: name, notes: notes, due: due)
         saveToPersistence()
     }
     
-    func updateTask(task: Task, name: String, notes: String?, due: Date?) {
+    func updateTask(task: Task, name: String, notes: String, due: Date) {
         task.name = name
         task.notes = notes
         task.due = due
@@ -39,19 +33,13 @@ class TaskController {
     }
     
     func deleteTask(taskToRemove: Task) {
-        CoreDataStack.context.delete(taskToRemove)
+        taskToRemove.managedObjectContext?.delete(taskToRemove)
         saveToPersistence()
     }
     
     //MARK: Other functionality
     
     //MARK: Persistence
-    
-    func fetchTasks() -> [Task] {
-        var request = NSFetchRequest<Task>()
-        request = Task.fetchRequest()
-        return(try? CoreDataStack.context.fetch(request)) ?? []
-    }
     
     func saveToPersistence() {
         do {

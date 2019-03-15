@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TaskProject/Controllers/ModelControllers/ButtonTableViewCell.swift"
-            timestampString = "574272308.621102"
+            filePath = "TaskProject/Controllers/ViewControllers/TaskListTableViewController.swift"
+            timestampString = "574302441.986293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "updateViews()"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "controller(_:didChange:at:for:newIndexPath:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -26,10 +26,12 @@ class ButtonTableViewCell: UITableViewCell {
     //MARK: Outlets
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var targetDateLabel: UILabel!
+    @IBOutlet weak var button: UIButton!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        button.setImage(UIImage(imageLiteralResourceName: "Isaac2"), for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,12 +44,11 @@ class ButtonTableViewCell: UITableViewCell {
         //Update all the labels. I have a nameLabel, a dateLabel, and an image view. Whenever I add the date formatting, the function ceases to work. I will need to redo that part; I think it is related to having my datePicker not embedded in a textField. Finally, I need to get the UIImage to work and change when I tap it, but that will happen in the buttonCellButtonTapped function.
         taskNameLabel.text = task.name
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
+        dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
         guard let due = task.due else {return}
         let dueDate = dateFormatter.string(from: due)
         targetDateLabel.text = dueDate
-        
     }
     
     //MARK: Actions

@@ -13,10 +13,10 @@ class TaskDetailTableViewController: UITableViewController {
     //Landing pads and other cool stuff!
     var selectedTask: Task? {
         didSet {
+            loadViewIfNeeded()
             updateViews()
         }
     }
-    var dueDateValue: Date?
     
     //MARK: Outlets
     @IBOutlet weak var taskNameTextField: UITextField!
@@ -26,6 +26,7 @@ class TaskDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
     }
     
     //MARK: Other Functions
@@ -45,15 +46,10 @@ class TaskDetailTableViewController: UITableViewController {
         taskNameTextField.text = selectedTask.name
         notesTextField.text = selectedTask.notes
         dueDatePicker.date = date
-//        let formatter = DateFormatter()
-//        formatter.dateStyle = .medium
-//        formatter.timeStyle = .medium
-//        let stringDate = formatter.string(from: date)
     }
     
     //MARK: Actions
     @IBAction func saveTaskButtonTapped(_ sender: UIBarButtonItem) {
-        
         updateTask()
         taskNameTextField.text = ""
         notesTextField.text = ""

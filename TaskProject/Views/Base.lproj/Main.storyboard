@@ -25,20 +25,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="216" translatesAutoresizingMaskIntoConstraints="NO" id="lcn-20-IvQ">
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="155" translatesAutoresizingMaskIntoConstraints="NO" id="lcn-20-IvQ">
                                             <rect key="frame" x="24" y="19" width="327" height="137"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-rQ-L0u">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="122" height="137"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCH-uD-Y6m">
-                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="61.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="122" height="61.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miV-JO-Gyx">
-                                                            <rect key="frame" x="0.0" y="69.5" width="80" height="67.5"/>
+                                                            <rect key="frame" x="0.0" y="69.5" width="122" height="67.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -46,8 +46,11 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tz-nh-qXA">
-                                                    <rect key="frame" x="296" y="0.0" width="31" height="137"/>
-                                                    <state key="normal" title="text">
+                                                    <rect key="frame" x="277" y="0.0" width="50" height="137"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="8CF-Le-YNn"/>
+                                                    </constraints>
+                                                    <state key="normal">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -66,6 +69,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="button" destination="7tz-nh-qXA" id="wXe-ar-kP4"/>
                                     <outlet property="targetDateLabel" destination="miV-JO-Gyx" id="qFx-14-JT8"/>
                                     <outlet property="taskNameLabel" destination="OCH-uD-Y6m" id="ciw-Yp-sDl"/>
                                     <segue destination="dvq-3v-Rr4" kind="show" identifier="toTaskDetail" id="ccb-OQ-XL7"/>
